@@ -42,6 +42,10 @@ module.exports.create = (event, context, callback) => {
 
     // create a response
     const response = {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': true
+      },
       statusCode: 200,
       body: JSON.stringify(params.Item),
     };
